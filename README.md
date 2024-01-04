@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/c8e3a5ba955683eac431/maintainability)](https://codeclimate.com/github/nikitakozlovjr/Password-Security/maintainability)
+
 # Password Security
 
 ### Discription
