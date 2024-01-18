@@ -2,6 +2,9 @@
 
 # Password Security
 
+> **Note**
+This library is frequently updated and supplemented with new functionality and password evaluation criteria. Therefore, stay tuned for changes in the password evaluation documentation
+
 ### Discription
 This module helps with deep work with passwords. This module helps with password analysis, gives tips on how to improve it and offers its own solutions for improving the password.
 
@@ -39,3 +42,29 @@ const security2 = password2.boostInfo();
 // The password must contain at least 1 lowercase letter 
 // The password must contain at least 1 special character 
 ```
+
+### Password strength options
+
+___
+
+This password takes into account the parameters presented in the table when checking the password for strength. If a password meets a certain parameter, it is assigned 1 point. Maximum possible score is 5 points.
+
+|     Param     |Increases reliability|Reduces reliability|
+|:-------------:|:---------------:|:-------------:|
+| length        | > 8             | <= 8          |
+| capitalLetter | >= 1            | < 1           |
+|lowercaseLetter| >= 1            | <1            |
+|number         | >= 1            | <1            |
+|specialCharacters| >= 1          | <1            |
+
+### Reliability assessment algorithm
+
+___
+
+Considering the number of points a password has, it is assigned a strength level depending on it. All levels are presented in the table.
+
+|     Grade     |Number of points|
+|:-------------:|:---------------:|
+| Low    | 0 - 1 | 
+| Middle | 2 - 4 | 
+|High    |   5   | 
